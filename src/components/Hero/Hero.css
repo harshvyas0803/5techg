@@ -1,0 +1,61 @@
+.main {
+    background: rgb(63, 94, 251);
+    background: linear-gradient(172deg, rgba(63, 94, 251, 0.363) 0%, rgba(252, 70, 106, 0.331) 100%);
+  
+    min-height: 80vh;
+}
+
+.navbar{
+    display: flex; background: transparent;  gap: 25%; align-items: center; height: 90px;overflow: hidden;
+}
+
+.logo img{
+    margin-top: 2vh;
+    margin-left: 2vh;
+}
+ 
+.navbar-links {
+  display: flex;
+  gap: 3vw; /* Space between links */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;font-size: large;
+  color: #30303065;
+  margin-right: 15px;
+  align-items: center; /* Vertically center links */
+}
+
+/* Individual Nav Link */
+.navbar-link {
+  color: #454545;
+  text-decoration: none;
+  line-height: 36px; /* Ensures consistent vertical alignment */
+}
+
+.navbar-link:hover {
+  color: #3b82f6;
+  cursor: pointer;
+}
+
+/* Call Now Button */
+.call-now {
+  display: inline-block;
+  height: 36px;
+  width: 150px;
+  padding: 0 24px;
+  background: linear-gradient(to right, #6d47ed, #31b9f3);
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.125rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.5s ease;
+  text-align: center;
+  border-radius: 9px;
+  line-height: 36px; 
+}
+
+.call-now:hover {
+  background: linear-gradient(to right, #31b9f3, #6d47ed);
+  color: rgba(0, 0, 0, 0.566);
+}
