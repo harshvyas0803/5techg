@@ -1,0 +1,76 @@
+.footer {
+    background: linear-gradient(to right, #ebf8ff, #ffffff);
+    padding: 40px 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .footer h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+  }
+
+  .footer h1 span {
+    color: #6b46c1;
+  }
+
+  .footer p {
+    color: #4a5568;
+    margin: 8px 0;
+  }
+
+  .footer h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 16px;
+  }
+
+  .footer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .footer ul li {
+    color: #4a5568;
+    margin: 8px 0;
+  }
+
+  .footer a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .footer .newsletter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .newsletter input[type="email"] {
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+
+  .newsletter button {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .newsletter button i {
+    margin-left: 8px;
+  }

@@ -1,38 +1,34 @@
 import React from 'react'
 import './Hero.css'
-import logo from '../../assets/logo.png'
+import Navbar from '../Navbar/Navbar'
+import hero from '../../assets/right-hero.png'
+ import Companies from '../companies/companies'
 const Hero = () => {
   return (
     <div>
 <div className="main">
-<div className="navbar">
-<div className="logo"><img src={logo} alt="" /></div>
-
-<div className="others">
-<ul className="navbar-links">
-            <li><a href="/" className="navbar-link">Home</a></li>
-            <li><a href="/about" className="navbar-link">About</a></li>
-            <li><a href="/portfolio" className="navbar-link">Portfolio</a></li>
-            <li><a href="/product" className="navbar-link">Product</a></li>
-            <li><a href="/contact" className="navbar-link">Contact</a></li>
-            <li>
-              <a href="tel:+917028828831" className="call-now">
-                Call Now→
-              </a>  
-            </li>
-          </ul>
-</div>
-
-</div>
+<Navbar/>
 <div className="hero">
-    <div className="left"></div>
-    <div className="rigth"></div>
+    <div className="left">
+
+<h1>Great products <br/> Are built by<br/> Great Teams</h1>
+<p className='paragraph'>We help build and manage a team of world-class <br/>
+developers to bring your vision to life.<br/>
+Bringing your brand to life with breathtaking web <br/>
+and mobile experiences.</p>
+
+<a href="#" class="contact-button">Contact now</a>
+
+    </div>
+    <div className="right">
+<img src={hero} alt="right-img" />
+    </div>
 </div>
 
 </div>
 
 
-
+<Companies/>
 
 
 
