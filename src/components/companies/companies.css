@@ -1,13 +1,35 @@
+.rotation-container {
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+    width: 100%; /* Full width */
+    display: flex;
+    padding-top: 8vh;
+    justify-content: center; /* Center the logos */
+}
+
 .logo-container {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px;
-    background-color: #f9f9f9;
+    animation: rotate 15s linear infinite; /* Infinite rotation */
+    white-space: nowrap;
 }
 
 .logo-container img {
     max-width: 105px; /* Adjust the size as needed */
-    max-height: 80px;  /* Adjust the size as needed */
+    max-height: 80px; /* Adjust the size as needed */
     object-fit: contain;
+    margin: 0 20px; /* More spacing between logos */
+}
+
+/* Keyframes for rotation */
+@keyframes rotate {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Move left to create rotation effect */
+    }
+}
+
+/* Optional: Pause rotation on hover */
+.rotation-container:hover .logo-container {
+    animation-play-state: paused; /* Pause the animation on hover */
 }

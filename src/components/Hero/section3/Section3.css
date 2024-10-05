@@ -1,0 +1,70 @@
+.section3_container {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 40px; 
+    border: none;
+    outline: none;
+    border-radius: 10px;  
+    margin-left: 85px; 
+}
+
+.section3_text {
+    flex: 1; 
+    z-index: 10;
+    color: rgb(57, 76, 84); 
+    margin-right: 20px;  
+}
+
+.section3_title {
+    font-size: 70px; 
+    font-weight: bold; 
+    z-index: 10;
+    margin-bottom: 10px; 
+}
+
+.section3_subtitle {
+    font-size: 35px; 
+    z-index: 10;
+    font-weight: 400;  
+    margin: 10px 0; 
+}
+
+.section3_description, 
+.section3_support_description, 
+.section3_integrations_description {
+    margin: 5px 0; 
+    z-index: 10;
+}
+
+.section3_support_title, 
+.section3_integrations_title {
+    font-size: 35px; 
+    font-weight: 400; 
+    z-index: 10;
+    margin: 15px 0 5px 0; 
+}
+
+.section3_image_container {
+    flex-shrink: 0; 
+    width: 50%; /* Adjust the width of the image container */
+    position: relative; /* Added to position the image absolutely within the container */
+}
+
+.section3_image {
+     
+       margin-left: 0%;
+    object-fit: cover;  
+    border-radius: 10px;   
+}
+
+.pwaei {
+    font-size: 70px;
+    z-index: 10;
+    font-weight: bold;
+}
+
+.section3_img_container{
+    
+ 
+}
