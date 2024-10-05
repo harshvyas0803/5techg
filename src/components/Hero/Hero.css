@@ -3,9 +3,9 @@
     background: linear-gradient(172deg, rgba(63, 94, 251, 0.363) 0%, rgba(252, 70, 106, 0.331) 100%);
     min-height: 80vh;
  
-    justify-content: space-between; /* Ensure the left and right sections are spread apart */
-    align-items: center; /* Vertically center the content */
-    padding: 2vw; /* Add padding to ensure content doesn't touch the edges */
+    justify-content: space-between;  
+    align-items: center;  
+    padding: 2vw; 
 }
 
 .hero {
@@ -15,8 +15,7 @@
 
 .left {
     flex: 1;
-    /* Replace this with whatever styling you want for .left */
-    margin-right: 2vw; /* Add some space between the left and right sections */
+     margin-right: 2vw;  
     padding-left: 100px;padding-top: 5vh;color:   #205569;
 font-size:3vh;
 }
@@ -28,15 +27,15 @@ font-size: 3vh;
 .right {
     flex: 1;
     
-    max-width: 100%; /* Remove width restrictions so the image fits properly */
+    max-width: 100%;  
     display: flex;
     justify-content: flex-end; 
-    margin-right: 5vw;/* Align the image to the right */
+    margin-right: 5vw; 
 }
 
 .right img {
-    max-width: 100%; /* Ensure the image is responsive */
-    height: auto; /* Maintain image aspect ratio */
+    max-width: 100%; 
+    height: auto; 
 }
  .contact-n-btn{
 

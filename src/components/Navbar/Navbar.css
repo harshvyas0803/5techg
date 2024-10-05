@@ -12,21 +12,21 @@
  
 .navbar-links {
   display: flex;
-  gap: 3vw; /* Space between links */
+  gap: 3vw;  
   list-style-type: none;
   margin: 0;
   padding: 0;
   font-weight: 500;font-size: large;
   color: #30303065;
   margin-right: 15px;
-  align-items: center; /* Vertically center links */
+  align-items: center;  
 }
 
-/* Individual Nav Link */
+ 
 .navbar-link {
   color: #454545;
   text-decoration: none;
-  line-height: 36px; /* Ensures consistent vertical alignment */
+  line-height: 36px;  
 }
 
 .navbar-link:hover {

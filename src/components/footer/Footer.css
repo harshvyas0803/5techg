@@ -65,8 +65,8 @@
 .paragraph2 {
     letter-spacing: 10px; 
     font-size: larger; 
-    margin-top: 0; /* Adjusted */
-    margin-bottom: 5px; /* Adjusted */
+    margin-top: 0;  
+    margin-bottom: 5px;  
 }
 
 .newsletter-input {

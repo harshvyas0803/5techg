@@ -47,8 +47,8 @@
 
 .section3_image_container {
     flex-shrink: 0; 
-    width: 50%; /* Adjust the width of the image container */
-    position: relative; /* Added to position the image absolutely within the container */
+    width: 50%;  
+    position: relative;  
 }
 
 .section3_image {
@@ -64,7 +64,4 @@
     font-weight: bold;
 }
 
-.section3_img_container{
-    
  
-}
