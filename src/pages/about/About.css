@@ -6,7 +6,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 12vh;
-    color:  
+    color: #333; /* Default text color */
 }
 
 .contentdiv h3 {
@@ -32,45 +32,12 @@
     color: #ff6347;
 }
 
-.right {
-    position: relative;
-    transition: transform 0.4s ease, box-shadow 0.3s ease;
-}
-
-.right:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.right {
-    animation: float 3s ease-in-out infinite;
-}
-
-.contentdiv h3,
-.contentdiv h2,
-.right {
-    transition: all 0.3s ease-in-out;
-}
-
 .contentdiv2 {
     display: flex;
     align-items: center;
     margin: 20px; 
     padding: 20px;
-    background: rgb(120, 165, 218);
-    background: linear-gradient(103deg, rgba(120, 165, 218, 0.44870448179271705) 0%, rgba(255, 255, 255, 0.9304971988795518) 100%);
+    background: linear-gradient(103deg, rgba(120, 165, 218, 0.448) 0%, rgba(255, 255, 255, 0.93) 100%);
     border-radius: 15px; 
     max-width: 1200px;  
     margin-left: auto;  
@@ -119,8 +86,7 @@
 .gradient-text {
     font-size: 48px;  
     font-weight: bold;
-    background: rgb(28,34,186);
-    background: linear-gradient(149deg, rgba(28,34,186,0.9304971988795518) 0%, rgba(161,120,218,1) 100%);
+    background: linear-gradient(149deg, rgba(28,34,186,0.93) 0%, rgba(161,120,218,1) 100%);
     -webkit-background-clip: text;  
     -webkit-text-fill-color: transparent;  
     text-align: center;  
@@ -136,35 +102,49 @@
 
 .timeline {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
+    margin: 40px auto; 
+    width: 30%;  
 }
 
 .timeline-event {
     position: relative;
-    margin: 0 20px;
+    margin: 60px 0;  
     padding: 20px;
-    background-color:white;
-     
- 
-    max-width: 200px;
-    text-align: center;
-    transition: transform 0.2s;
+    background-color: white; 
+    border-radius: 10px; 
+    text-align: center; 
+    overflow: hidden; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    border: 2px solid transparent; 
+    background-clip: padding-box; 
 }
 
-.timeline-event:hover {
-    transform: scale(1.02);
+.timeline-event h4 {
+    font-size: 24px;  
+    font-weight: bold; 
+    margin-bottom: 5px; /* Spacing below the year */
+    color: #333; 
 }
 
-.timeline::before {
-    content: '';
+.timeline-event p {
+    font-size: 16px; 
+    color: #555; 
+    line-height: 1.5; 
+    margin-top: 5px; /* Optional spacing to separate from year */
+}
+
+.timeline-line {
     position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 4px; /* Increased height for better visibility */
-    background-color: #007bff; /* Blue color for the line */
+    left: 50%;  
+    top: 0; 
+    height: 0;   
+    width: 35px;  
+    background: linear-gradient(172deg, rgba(63, 94, 251, 0.363) 0%, rgba(252, 70, 106, 0.331) 100%);
+    transform: translateX(-50%);  
     z-index: -1;
+    transition: height 5s ease;  
+}
+
+.animate-line {
+    height: 100%;  
 }

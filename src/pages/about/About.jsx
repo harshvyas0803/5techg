@@ -1,10 +1,38 @@
+import React, { useEffect, useRef } from 'react';
 import './About.css';
 import Navbar from '../../components/Navbar/Navbar';
 import photo1 from '../../assets/Frame 3.png';
-import React from 'react';
 import profile from '../../assets/koli.png';
 
 const About = () => {
+  const timelineRef = useRef(null);
+  const lineRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+          
+            lineRef.current.classList.add('animate-line');
+            observer.unobserve(entry.target);  
+          }
+        });
+      },
+      { threshold: 0.5 }  
+    );
+
+    if (timelineRef.current) {
+      observer.observe(timelineRef.current);
+    }
+
+    return () => {
+      if (timelineRef.current) {
+        observer.unobserve(timelineRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div>
       <div className="navbarinabout">
@@ -16,7 +44,7 @@ const About = () => {
           <h3>Our information</h3>
           <h2>Introduction</h2>
           <p>
-            We are a team of experienced professionals with thorough expertise in marketing, developing and designing. We build brands' success digitally through our exceptional IT solutions like web development, mobile app development, full-stack web development, UI/UX development, etc. Our expertise extends to developing software, games, mobile applications, and much more in all their forms that you can think of, striving to minimize our carbon footprint and contribute positively to our communities.
+            We are a team of experienced professionals with thorough expertise in marketing, developing, and designing. We build brands' success digitally through our exceptional IT solutions like web development, mobile app development, full-stack web development, UI/UX development, etc. Our expertise extends to developing software, games, mobile applications, and much more in all their forms that you can think of, striving to minimize our carbon footprint and contribute positively to our communities.
           </p>
         </div>
         <div className="right">
@@ -44,7 +72,8 @@ const About = () => {
           <p className='para'>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
 
-        <div className="timeline">
+        <div className="timeline" ref={timelineRef}>
+          <div className="timeline-line" ref={lineRef} /> {/* Animated line */}
           <div className="timeline-event left">
             <div className="year">2017</div>
             <p>Our journey of innovation and growth began.</p>

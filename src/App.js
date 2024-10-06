@@ -1,27 +1,19 @@
-import './App.css';
+// src/App.js
 import React from 'react';
-import Navbar from '../src/components/Navbar/Navbar';  // Assuming Navbar exists in this path
-import Hero from '../src/components/Hero/Hero';        // Assuming Hero exists in this path
-import About from '../src/pages/about/About';     // Assuming About exists in this path
- 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from '../src/components/Hero/Hero'; // adjust paths as necessary
+import About from '../src/pages/about/About';
+import Portfolio from '../src/pages/portfolio/Portfolio'; // new portfolio page
 
-const App = () => {
+function App() {
   return (
     <Router>
-      <div>
-     
-        
-        <Routes>
-   
-          <Route path="/" element={<Hero />} />
-
-     
-          <Route path="/about" element={<About />} />
-
-    
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />  
+        {/* Add other routes as needed */}
+      </Routes>
     </Router>
   );
 }
