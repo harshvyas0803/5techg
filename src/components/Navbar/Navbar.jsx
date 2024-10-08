@@ -1,43 +1,67 @@
-import React from 'react'
-import logo from '../../assets/logo.png'
-import './Navbar.css'
+import React from 'react';
+import logo from '../../assets/logo.png';
+import './Navbar.css';
+import { motion } from 'framer-motion';
+
 const Navbar = () => {
   return (
-    <div>
+    <motion.div
+      className="navbar"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.5 }}  
+    >
+      <motion.div
+        className="logo"
+        whileHover={{ scale: 1.1, rotate: 10 }}
+        transition={{ type: 'spring', stiffness: 200, damping: 15 }}   
+      >
+        <img src={logo} alt="Logo" />
+      </motion.div>
 
+      <motion.div className="others">
+        <motion.ul
+          className="navbar-links"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              opacity: 0,
+              y: -20,
+            },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 0.3,
+                staggerChildren: 0.4,  /* Slower stagger effect */
+              },
+            },
+          }}
+        >
+          {['Home', 'About', 'Portfolio', 'Product', 'Contact'].map((link, index) => (
+            <motion.li
+              key={index}
+              whileHover={{ scale: 1.1, color: '#f39c12' }}
+              transition={{ type: 'spring', stiffness: 150, damping: 15 }}   
+            >
+              <a href={`/${link.toLowerCase()}`} className="navbar-link">
+                {link}
+              </a>
+            </motion.li>
+          ))}
+          <motion.li
+            whileHover={{ scale: 1.1, color: '#f39c12' }}
+            transition={{ type: 'spring', stiffness: 150, damping: 15 }}   
+          >
+            <a href="tel:+917028828831" className="call-now">
+              Call Now →
+            </a>
+          </motion.li>
+        </motion.ul>
+      </motion.div>
+    </motion.div>
+  );
+};
 
-
-<div className="navbar">
-<div className="logo"><img src={logo} alt="" /></div>
-
-<div className="others">
-<ul className="navbar-links">
-            <li><a href="/" className="navbar-link">Home</a></li>
-            <li><a href="/about" className="navbar-link">About</a></li>
-            <li><a href="/Portfolio" className="navbar-link">Portfolio</a></li>
-            <li><a href="/product" className="navbar-link">Product</a></li>
-            <li><a href="/contact" className="navbar-link">Contact</a></li>
-            <li>
-              <a href="tel:+917028828831" className="call-now">
-                Call Now→
-              </a>  
-            </li>
-          </ul>
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-    </div>
-  )
-}
-
-export default Navbar
+export default Navbar;
