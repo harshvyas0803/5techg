@@ -1,32 +1,60 @@
-
-.navbar{
-    display: flex; 
-    background: transparent;
-      gap: 25%; align-items: center; height:100%;overflow: hidden;margin-top: -20px; 
+/* Close Icon for Side Menu */
+.close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #454545;
+  z-index: 1001;  
 }
 
-.logo img{
-    margin-top: 0.5vh;
-    margin-left: 2vh;
+/* General Navbar Styles */
+.navbar {
+  margin-right: 2vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2vw;
+  background: transparent;
+  height: 100%;
+  margin-top: -20px;
 }
- 
+
+.logo img {
+  margin-top: 0.5vh;
+  margin-left: 2vh;
+  width: 120px;
+}
+
+.menu-toggle {
+  display: none; /* Initially hidden on larger screens */
+}
+
+.others {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar Links */
 .navbar-links {
   display: flex;
-  gap: 3vw;  
+  gap: 3vw;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  font-weight: 500;font-size: large;
+  font-weight: 500;
+  font-size: large;
   color: #30303065;
-  margin-right: 15px;
-  align-items: center;  
 }
 
- 
 .navbar-link {
   color: #454545;
   text-decoration: none;
-  line-height: 36px;  
+  line-height: 36px;
 }
 
 .navbar-link:hover {
@@ -38,7 +66,6 @@
 .call-now {
   display: inline-block;
   height: 36px;
-  width: 150px;
   padding: 0 24px;
   background: linear-gradient(to right, #6d47ed, #31b9f3);
   color: white;
@@ -48,10 +75,66 @@
   transition: background 0.5s ease;
   text-align: center;
   border-radius: 9px;
-  line-height: 36px; text-decoration: none; 
+  line-height: 36px;
+  text-decoration: none;
 }
 
 .call-now:hover {
   background: linear-gradient(to right, #31b9f3, #6d47ed);
   color: rgba(0, 0, 0, 0.566);
+}
+
+/* Hide side-menu on larger screens */
+.side-menu {
+  display: none;
+}
+
+/* Responsive styles for screens 750px and below */
+@media screen and (max-width: 750px) {
+  .navbar-links {
+    display: none; /* Hide the links on smaller screens */
+  }
+
+  /* Show hamburger menu on smaller screens */
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  /* Display side-menu when it is toggled */
+  .side-menu {
+    display: none; /* Initially hidden */
+    position: fixed;
+    right: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .side-menu.open {
+    display: block; /* Show the side menu */
+    right: 0; /* Slide it into view */
+  }
+}
+
+/* Side menu styles */
+.side-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-menu li {
+  margin: 20px 0;
+}
+
+.side-menu a {
+  color: #454545;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
 }

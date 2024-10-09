@@ -1,6 +1,7 @@
 .main {
     background: rgb(63, 94, 251);
-    background: linear-gradient(172deg, rgba(63, 94, 251, 0.363) 0%, rgba(252, 70, 106, 0.331) 100%);
+    background: rgb(120,209,218);
+    background: linear-gradient(160deg, rgba(120,209,218,0.4907212885154062) 0%, rgba(186,28,161,0.2358193277310925) 57%);
     min-height: 80vh;
  
     justify-content: space-between;  
