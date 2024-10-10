@@ -1,3 +1,8 @@
+ html{
+  overflow-x: hidden;
+ }
+
+
 /* Close Icon for Side Menu */
 .close-icon {
   position: absolute;
@@ -6,10 +11,10 @@
   font-size: 2rem;
   cursor: pointer;
   color: #454545;
-  z-index: 1001;  
+  z-index: 1001;
 }
 
- 
+/* Navbar styling */
 .navbar {
   z-index: 10000;
   margin-right: 2vw;
@@ -23,24 +28,14 @@
   margin-top: -10px;
 }
 
+/* Logo styling */
 .logo img {
   margin-top: 0.5vh;
   margin-left: 2vh;
   width: 120px;
 }
 
-.menu-toggle {
-  display: none;  
-}
-
-.others {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Navbar Links */
+/* Navbar links styling */
 .navbar-links {
   display: flex;
   gap: 3vw;
@@ -63,7 +58,7 @@
   cursor: pointer;
 }
 
-/* Call Now Button */
+/* Call Now Button styling */
 .call-now {
   display: inline-block;
   height: 36px;
@@ -84,48 +79,60 @@
   background: linear-gradient(to right, #31b9f3, #6d47ed);
   color: rgba(0, 0, 0, 0.566);
 }
- 
+
+/* Side menu styling */
 .side-menu {
   display: none;
 }
 
 /* Responsive styles for screens 750px and below */
 @media screen and (max-width: 750px) {
-  .navbar-links {
-    display: none; /* Hide the links on smaller screens */
+  .navbar {
+    width: 100%;
   }
-.navbar{
-  width: 100%;
-}
+
+  /* Hide the links on smaller screens */
+  .navbar-links {
+    display: none;
+  }
+
   /* Show hamburger menu on smaller screens */
   .menu-toggle {
     display: block;
-align-items: end;
     font-size: 2rem;
     cursor: pointer;
+    position: fixed; /* Make the toggle fixed to the screen */
+    top: 20px;       /* Align to top */
+    right: 20px;     /* Align to the extreme right of the screen */
+    z-index: 1001;   /* Ensure it's above other content */
   }
 
   /* Display side-menu when it is toggled */
   .side-menu {
-    display: none;  
+    display: block;
     position: fixed;
-    right: -250px;
+    right: -100%; /* Fully hide off-screen when closed */
     top: 0;
-    width: 250px;
+    width: 100vw; /* Full width of the viewport */
     height: 100%;
-    
-    transition: right 0.3s ease;
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease; /* Smooth slide-in transition */
     padding: 20px;
     z-index: 10000;
   }
 
   .side-menu.open {
-    display: block; 
-    right: 0;  
+    right: 0; /* Slide in from the right */
+  }
+
+  /* Ensure no white space when hidden */
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
   }
 }
 
- 
+/* Side menu links styling */
 .side-menu ul {
   list-style-type: none;
   padding: 0;
