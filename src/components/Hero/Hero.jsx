@@ -71,13 +71,12 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-
-      {/* Animate sections as they come into view */}
+ 
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5, staggerChildren: 0.3 }}
-        viewport={{ once: true }} // Only animate once
+        viewport={{ once: true }}  
       >
         <Companies />
         <Section2 />

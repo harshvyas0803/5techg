@@ -9,8 +9,9 @@
   z-index: 1001;  
 }
 
-/* General Navbar Styles */
+ 
 .navbar {
+  z-index: 10000;
   margin-right: 2vw;
   width: 100%;
   display: flex;
@@ -19,7 +20,7 @@
   padding: 0 2vw;
   background: transparent;
   height: 100%;
-  margin-top: -20px;
+  margin-top: -10px;
 }
 
 .logo img {
@@ -29,7 +30,7 @@
 }
 
 .menu-toggle {
-  display: none; /* Initially hidden on larger screens */
+  display: none;  
 }
 
 .others {
@@ -83,8 +84,7 @@
   background: linear-gradient(to right, #31b9f3, #6d47ed);
   color: rgba(0, 0, 0, 0.566);
 }
-
-/* Hide side-menu on larger screens */
+ 
 .side-menu {
   display: none;
 }
@@ -94,35 +94,38 @@
   .navbar-links {
     display: none; /* Hide the links on smaller screens */
   }
-
+.navbar{
+  width: 100%;
+}
   /* Show hamburger menu on smaller screens */
   .menu-toggle {
     display: block;
+align-items: end;
     font-size: 2rem;
     cursor: pointer;
   }
 
   /* Display side-menu when it is toggled */
   .side-menu {
-    display: none; /* Initially hidden */
+    display: none;  
     position: fixed;
     right: -250px;
     top: 0;
     width: 250px;
     height: 100%;
-    background-color: #fff;
+    
     transition: right 0.3s ease;
     padding: 20px;
-    z-index: 1000;
+    z-index: 10000;
   }
 
   .side-menu.open {
-    display: block; /* Show the side menu */
-    right: 0; /* Slide it into view */
+    display: block; 
+    right: 0;  
   }
 }
 
-/* Side menu styles */
+ 
 .side-menu ul {
   list-style-type: none;
   padding: 0;
