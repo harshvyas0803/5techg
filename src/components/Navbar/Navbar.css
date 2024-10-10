@@ -90,7 +90,9 @@
   .navbar {
     width: 100%;
   }
-
+.logo{
+  margin-top: 20px;
+}
   /* Hide the links on smaller screens */
   .navbar-links {
     display: none;
