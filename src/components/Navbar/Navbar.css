@@ -1,7 +1,6 @@
- html{
+html {
   overflow-x: hidden;
- }
-
+}
 
 /* Close Icon for Side Menu */
 .close-icon {
@@ -85,56 +84,66 @@
   display: none;
 }
 
-/* Responsive styles for screens 750px and below */
+ 
+.menu-toggle {
+  display: none;
+}
+
+ 
 @media screen and (max-width: 750px) {
   .navbar {
     width: 100%;
   }
-.logo{
-  margin-top: 20px;
-}
-  /* Hide the links on smaller screens */
+  
+  html {
+    overflow-x: hidden;
+  }
+
+  .logo {
+    margin-top: 20px;
+  }
+
+ 
   .navbar-links {
     display: none;
   }
 
-  /* Show hamburger menu on smaller screens */
+ 
   .menu-toggle {
     display: block;
     font-size: 2rem;
     cursor: pointer;
-    position: fixed; /* Make the toggle fixed to the screen */
-    top: 20px;       /* Align to top */
-    right: 20px;     /* Align to the extreme right of the screen */
-    z-index: 1001;   /* Ensure it's above other content */
+    position: fixed;  
+    top: 20px;      
+    right: 20px;     
+    z-index: 1001;   
   }
-
-  /* Display side-menu when it is toggled */
+ 
   .side-menu {
     display: block;
     position: fixed;
-    right: -100%; /* Fully hide off-screen when closed */
+    right: -100%; 
     top: 0;
-    width: 100vw; /* Full width of the viewport */
+    width: 100vw;  
     height: 100%;
     background: #fff;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease; /* Smooth slide-in transition */
+    transition: right 0.3s ease;  
     padding: 20px;
     z-index: 10000;
   }
 
   .side-menu.open {
-    right: 0; /* Slide in from the right */
+    right: 0;  
   }
 
-  /* Ensure no white space when hidden */
+ 
   body {
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
   }
 }
 
-/* Side menu links styling */
+ 
 .side-menu ul {
   list-style-type: none;
   padding: 0;
