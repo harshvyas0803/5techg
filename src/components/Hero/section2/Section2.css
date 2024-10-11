@@ -21,7 +21,7 @@
 .cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px 4px; /* Reduced vertical gap (8px) and horizontal gap (4px) */
+    gap: 8px 0.1px; /* Reduced vertical gap (8px) and horizontal gap (4px) */
     justify-items: center;
     width: 100%;
     max-width: 1200px;
@@ -44,7 +44,7 @@
 }
 
 .card img {
-    width: 70%;
+    width: 50%; /* Reduced image size */
     margin: 0 auto;
     border-radius: 10px;
 }
