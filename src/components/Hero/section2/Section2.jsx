@@ -13,7 +13,7 @@ import { motion } from 'framer-motion';
 
 const Section2 = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false, // Set to false to trigger the animation every time it's in view
     threshold: 0.1,
   });
   const controls = useAnimation();
@@ -36,7 +36,7 @@ const Section2 = () => {
   ];
 
   const cardVariants = {
-    hidden: { opacity: 0, scale: 1, y: 100 },  // Set scale to 1 here
+    hidden: { opacity: 0, scale: 1, y: 100 },
     visible: { 
       opacity: 1, 
       scale: 1, 
@@ -87,12 +87,12 @@ const Section2 = () => {
           <motion.div
             key={index}
             variants={cardVariants}
-            whileHover={{ scale: 1.05, boxShadow: '0px 20px 30px rgba(0,0,0,0.3)' }} // Hover effect still enlarges
+            whileHover={{ scale: 1.05, boxShadow: '0px 20px 30px rgba(0,0,0,0.3)' }} // Hover effect
             transition={{ type: 'spring', stiffness: 260, damping: 20 }}
           >
             <Card image={section.image} title={section.title} />
           </motion.div>
-        ))}
+        ))} 
       </motion.div>
     </motion.div>
   );
