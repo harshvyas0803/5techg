@@ -1,7 +1,8 @@
 .footer-container {
     width: 100%;  
     background: #F0F3F7;
-    padding-top: 25px;margin-bottom: 5vh;
+    padding-top: 25px;
+    margin-bottom: 5vh;
 }
 
 .footer {
@@ -74,6 +75,7 @@
     width: calc(100% - 22px);
     margin-bottom: 10px;
     border: 1px solid black;
+    border-radius: 20px;
 }
 
 .services {
@@ -131,9 +133,12 @@
 .newsletter-input {
     padding: 10px;
     width: calc(100% - 30px);  
-    border: 1px solid black;border-radius: 20px;min-width: fit-content;
+    border: 1px solid black;
+    border-radius: 20px;
+    min-width: fit-content;
     border: 2px solid #c654ff; 
 }
+
 .newsletter-input::placeholder {
     color: black; 
     opacity: 1;    
@@ -149,14 +154,57 @@
     position: inherit;  
 }
 
-
 .mail:hover {
     text-decoration: underline; 
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer {
+        margin-left: 5%;
+    }
+
+    .footer-column {
+        flex-basis: 45%; 
+        margin-bottom: 20px;  
+    }
+
+    .newsletter-input {
+        width: calc(100% - 30px); 
+    }
+}
+
 @media (max-width: 768px) {
+    .footer {
+        margin-left: 0;
+        align-items: center;
+    }
+
     .footer-column {
         flex-basis: 100%;
         text-align: center;
+    }
+
+    .email-input-container {
+        flex-direction: column;
+    }
+
+    .newsletter-input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px;
+    }
+
+    .footer-column {
+        margin-bottom: 15px;
+    }
+
+    .paragraph2 {
+        font-size: larger;
+        letter-spacing: 5px;
     }
 }

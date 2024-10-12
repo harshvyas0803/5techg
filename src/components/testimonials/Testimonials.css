@@ -1,3 +1,4 @@
+/* Testimonials Section */
 .testimonials_container {
     text-align: center;
     padding: 50px;
@@ -20,42 +21,43 @@
 .logos_container {
     display: flex;
     justify-content: center;
-    gap: 80px;  
-    margin: 20px 0;  
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 20px 0;
     margin-bottom: 80px;
 }
 
 .logo_color {
-    font-size: 80px;  
-    transition: transform 0.3s; 
+    font-size: 80px;
+    transition: transform 0.3s;
 }
 
 .logo_color:hover {
-    transform: scale(1.1);  
+    transform: scale(1.1);
 }
 
 .node {
-    color: #8CC84B;  
+    color: #8CC84B;
 }
 
 .next {
-    color: #000000; 
+    color: #000000;
 }
 
 .react {
-    color: #61DAFB;  
+    color: #61DAFB;
 }
 
 .mongodb {
-    color: #4DB33D; 
+    color: #4DB33D;
 }
 
 .mysql {
-    color: #00648C;  
+    color: #00648C;
 }
 
 .flutter {
-    color: #02569B; 
+    color: #02569B;
 }
 
 .testimonial_heading {
@@ -69,7 +71,7 @@
 .testimonials {
     display: flex;
     justify-content: center;
-    gap: 30px;  
+    gap: 30px;
     flex-wrap: wrap;
 }
 
@@ -79,42 +81,42 @@
     padding: 20px;
     margin: 20px 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;  
-    text-align: left;  
-    flex: 1 1 300px;  
-    transition: transform 0.3s, box-shadow 0.3s; 
+    max-width: 300px;
+    text-align: left;
+    flex: 1 1 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .testimonial:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .client_info {
     display: flex;
-    align-items: center; 
-    margin-top: 10px; 
+    align-items: center;
+    margin-top: 10px;
 }
 
 .client_photo {
     border-radius: 50%;
-    width: 50px;  
-    height: 50px; 
+    width: 50px;
+    height: 50px;
     object-fit: cover;
-    margin-right: 10px; 
-    transition: transform 0.3s; 
+    margin-right: 10px;
+    transition: transform 0.3s;
 }
 
 .client_photo:hover {
     transform: scale(1.1);
 }
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
     to {
-        
         opacity: 1;
         transform: translateY(0);
     }
@@ -122,4 +124,60 @@
 
 .testimonial {
     animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonials_heading {
+        font-size: 24px;
+    }
+
+    .testimonials_description {
+        font-size: 16px;
+    }
+
+    .logos_container {
+        gap: 20px;
+    }
+
+    .logo_color {
+        font-size: 60px;
+    }
+
+    .testimonial {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .client_photo {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials_heading {
+        font-size: 20px;
+    }
+
+    .testimonials_description {
+        font-size: 14px;
+    }
+
+    .logos_container {
+        gap: 15px;
+    }
+
+    .logo_color {
+        font-size: 50px;
+    }
+
+    .testimonial {
+        padding: 15px;
+    }
+
+    .client_photo {
+        width: 30px;
+        height: 30px;
+    }
 }

@@ -1,141 +1,207 @@
- 
 .horiz_card_list {
-    margin-top:2%;
-    margin-left: 0%;
-    margin-right: 5%;
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 20px 40px;
-    gap: 15px;  
-    scrollbar-width: thin;  
-    scrollbar-color: rgba(190, 73, 124, 0.8) white;  
-    position: relative;
+  margin-top:2%;
+  margin-left: 0%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 40px;
+  gap: 15px;  
+  scrollbar-width: thin;  
+  scrollbar-color: rgba(190, 73, 124, 0.8) white;  
+  position: relative;
+}
+
+
+.horiz_card_list::-webkit-scrollbar {
+  width: 8px;  
+  height: 8px;  
+}
+
+
+.horiz_card_list::-webkit-scrollbar-track {
+  background: white; 
+  border-radius: 10px;  
+}
+
+
+.horiz_card_list::-webkit-scrollbar-thumb {
+  background: rgba(190, 73, 124, 0.8); 
+  border-radius: 10px; 
+  transition: background 0.3s ease;  
+}
+
+.horiz_card_list::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 187, 233, 1);  
+}
+
+/* Card styles */
+.horiz_card {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  height: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;  
+  overflow: hidden;
+  flex-shrink: 0;  
+  margin-right: 15px;
+  border: 2px solid transparent;  
+}
+
+.horiz_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-color: rgb(238, 174, 202);  
+}
+
+.card_content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card_image {
+  width: 300px; 
+  height: 100%;  
+  object-fit: cover;   
+margin-right: 10px;
+}
+
+.read_more_button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(103deg, rgb(190, 73, 124) 0%, rgba(148, 187, 233, 1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  border: 2px solid transparent;
+  background-image: linear-gradient(103deg, rgb(190, 73, 124) 0%, rgba(148, 187, 233, 1) 100%);
+  -webkit-mask-image: linear-gradient(103deg, rgb(190, 73, 124) 0%, rgba(148, 187, 233, 1) 100%);
+  -webkit-mask-composite: destination-over;
+  width: fit-content;
+}
+
+.read_more_button:hover {
+  background-color: #0056b3;
+  color: black;
+  border: 2px solid black;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
   }
-  
-  
-  .horiz_card_list::-webkit-scrollbar {
-    width: 8px;  
-    height: 8px;  
+  100% {
+    transform: scale(1.05);
   }
-  
- 
-  .horiz_card_list::-webkit-scrollbar-track {
-    background: white; 
-    border-radius: 10px;  
+}
+
+.horiz_card:hover {
+  animation: pop 0.3s ease forwards;
+}
+
+.horiz_card_list:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to right, white, transparent);
+  z-index: 10;
+}
+
+.horiz_card_list:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: linear-gradient(to left, white, transparent);
+  z-index: 10;
+}
+.newdiv{
+
+  margin-left:12vw;
+}
+
+
+
+
+
+
+
+
+/* Styles for screens wider than 1200px (large desktops) */
+@media (min-width: 1200px) {
+  .horiz_card_list {
+    gap: 20px;
   }
-  
-  
-  .horiz_card_list::-webkit-scrollbar-thumb {
-    background: rgba(190, 73, 124, 0.8); 
-    border-radius: 10px; 
-    transition: background 0.3s ease;  
-  }
-  
-  .horiz_card_list::-webkit-scrollbar-thumb:hover {
-    background: rgba(148, 187, 233, 1);  
-  }
-  
-  /* Card styles */
+
   .horiz_card {
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     height: 300px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;  
-    overflow: hidden;
-    flex-shrink: 0;  
-    margin-right: 15px;
-    border: 2px solid transparent;  
   }
-  
-  .horiz_card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    border-color: rgb(238, 174, 202);  
-  }
-  
-  .card_content {
-    padding: 20px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .card_image {
-    width: 300px; 
-    height: 100%;  
-    object-fit: cover;   
- margin-right: 10px;
-  }
-  
-  .read_more_button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-weight: bold;
-    color: transparent;
-    background: linear-gradient(103deg, rgb(190, 73, 124) 0%, rgba(148, 187, 233, 1) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    border: 2px solid transparent;
-    background-image: linear-gradient(103deg, rgb(190, 73, 124) 0%, rgba(148, 187, 233, 1) 100%);
-    -webkit-mask-image: linear-gradient(103deg, rgb(190, 73, 124) 0%, rgba(148, 187, 233, 1) 100%);
-    -webkit-mask-composite: destination-over;
-    width: fit-content;
-  }
-  
-  .read_more_button:hover {
-    background-color: #0056b3;
-    color: black;
-    border: 2px solid black;
-  }
-  
-  @keyframes pop {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.05);
-    }
-  }
-  
-  .horiz_card:hover {
-    animation: pop 0.3s ease forwards;
-  }
-  
-  .horiz_card_list:before {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: linear-gradient(to right, white, transparent);
-    z-index: 10;
-  }
-  
-  .horiz_card_list:after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 100%;
-    right: 0;
-    top: 0;
-    background: linear-gradient(to left, white, transparent);
-    z-index: 10;
-  }
-  .newdiv{
 
-    margin-left:12vw;
+  .card_image {
+    width: 300px;
   }
+}
+
+/* Styles for screens between 768px and 1199px (tablets and smaller desktops) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .horiz_card_list {
+    padding: 20px 20px;
+    gap: 10px;
+  }
+
+  .horiz_card {
+    max-width: 650px;
+    height: 250px;
+  }
+
+  .card_image {
+    width: 250px;
+  }
+}
+
+/* Styles for screens below 768px (mobile phones) */
+@media (max-width: 767px) {
+  .horiz_card_list {
+    flex-direction: column;
+    padding: 10px 10px;
+  }
+
+  .horiz_card {
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .card_image {
+    width: 100%;
+    height: auto;
+  }
+
+  .card_content {
+    padding: 10px;
+  }
+
+  .read_more_button {
+    width: 100%;
+  }
+}
