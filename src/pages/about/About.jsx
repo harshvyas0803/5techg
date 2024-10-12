@@ -13,13 +13,12 @@ const About = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-          
             lineRef.current.classList.add('animate-line');
-            observer.unobserve(entry.target);  
+            observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.5 }  
+      { threshold: 0.5 }
     );
 
     if (timelineRef.current) {
@@ -73,7 +72,7 @@ const About = () => {
         </div>
 
         <div className="timeline" ref={timelineRef}>
-          <div className="timeline-line" ref={lineRef} /> {/* Animated line */}
+          <div className="timeline-line" ref={lineRef} />
           <div className="timeline-event left">
             <div className="year">2017</div>
             <p>Our journey of innovation and growth began.</p>

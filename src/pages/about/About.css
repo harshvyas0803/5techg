@@ -6,7 +6,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 12vh;
-    color: #333; /* Default text color */
+    color: #333;
 }
 
 .contentdiv h3 {
@@ -35,30 +35,30 @@
 .contentdiv2 {
     display: flex;
     align-items: center;
-    margin: 20px; 
+    margin: 20px;
     padding: 20px;
     background: linear-gradient(103deg, rgba(120, 165, 218, 0.448) 0%, rgba(255, 255, 255, 0.93) 100%);
-    border-radius: 15px; 
-    max-width: 1200px;  
-    margin-left: auto;  
+    border-radius: 15px;
+    max-width: 1200px;
+    margin-left: auto;
     margin-right: auto;
-    margin-top: 12vh;  
+    margin-top: 12vh;
 }
 
 .text-content {
     flex: 1;
-    margin-right: 20px;  
+    margin-right: 20px;
 }
 
 .team-title {
-    font-size: 16px;  
+    font-size: 16px;
     color: #555;
     margin-bottom: 10px;
 }
 
 .team-subtitle {
-    font-size: 24px;  
-    font-weight: bold; 
+    font-size: 24px;
+    font-weight: bold;
     color: #333;
     margin-bottom: 20px;
 }
@@ -73,24 +73,24 @@
     font-size: 16px;
     font-style: italic;
     color: #444;
-    border-left: 3px solid #007bff;  
-    padding-left: 10px;  
+    border-left: 3px solid #007bff;
+    padding-left: 10px;
 }
 
 .team-image {
-    max-width: 300px;  
-    height: auto;  
-    border-radius: 10px;  
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
 }
 
 .gradient-text {
-    font-size: 48px;  
+    font-size: 48px;
     font-weight: bold;
     background: linear-gradient(149deg, rgba(28,34,186,0.93) 0%, rgba(161,120,218,1) 100%);
-    -webkit-background-clip: text;  
-    -webkit-text-fill-color: transparent;  
-    text-align: center;  
-    margin-top: 20px; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -102,49 +102,73 @@
 
 .timeline {
     position: relative;
-    margin: 40px auto; 
-    width: 30%;  
+    margin: 40px auto;
+    width: 30%;
 }
 
 .timeline-event {
     position: relative;
-    margin: 60px 0;  
+    margin: 60px 0;
     padding: 20px;
-    background-color: white; 
-    border-radius: 10px; 
-    text-align: center; 
-    overflow: hidden; 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
-    border: 2px solid transparent; 
-    background-clip: padding-box; 
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    background-clip: padding-box;
 }
 
 .timeline-event h4 {
-    font-size: 24px;  
-    font-weight: bold; 
-    margin-bottom: 5px; /* Spacing below the year */
-    color: #333; 
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
 }
 
 .timeline-event p {
-    font-size: 16px; 
-    color: #555; 
-    line-height: 1.5; 
-    margin-top: 5px; /* Optional spacing to separate from year */
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 5px;
 }
 
 .timeline-line {
     position: absolute;
-    left: 50%;  
-    top: 0; 
-    height: 0;   
-    width: 35px;  
+    left: 50%;
+    top: 0;
+    height: 0;
+    width: 35px;
     background: linear-gradient(172deg, rgba(63, 94, 251, 0.363) 0%, rgba(252, 70, 106, 0.331) 100%);
-    transform: translateX(-50%);  
+    transform: translateX(-50%);
     z-index: -1;
-    transition: height 5s ease;  
+    transition: height 5s ease;
 }
 
 .animate-line {
-    height: 100%;  
+    height: 100%;
 }
+
+@media (max-width: 768px) {
+    .contentdiv {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contentdiv2 {
+        flex-direction: column;
+    }
+
+    .team-image {
+        margin-top: 20px;
+    }
+
+    .timeline {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contentdiv h2 {
+        font-size: 6vh;
+    }}
