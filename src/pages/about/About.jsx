@@ -18,7 +18,7 @@ const About = () => {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 } // Adjusted threshold for better detection
     );
 
     if (timelineRef.current) {
@@ -65,13 +65,13 @@ const About = () => {
         <img src={profile} alt="Team Illustration" className="team-image" />
       </div>
 
-      <div className="timeline-section">
+      <div className="timeline-section" ref={timelineRef}>
         <div className="timeline-background">
           <h2 className='gradient-text'>Our Journey Timeline</h2>
           <p className='para'>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
 
-        <div className="timeline" ref={timelineRef}>
+        <div className="timeline">
           <div className="timeline-line" ref={lineRef} />
           <div className="timeline-event left">
             <div className="year">2017</div>
