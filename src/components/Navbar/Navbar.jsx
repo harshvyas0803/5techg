@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion'; // Import Framer Motion
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { motion } from 'framer-motion';
 import logo from '../../assets/logo.png';
 import './Navbar.css';
 
@@ -18,12 +19,15 @@ const Navbar = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
+      {/* Logo with Link to Homepage */}
       <motion.div
         className="logo"
         whileHover={{ scale: 1.1, rotate: 5 }}
         transition={{ type: 'spring', stiffness: 300 }}
       >
-        <img src={logo} alt="Logo" />
+        <Link to="/" onClick={() => setMenuOpen(false)}>
+          <img src={logo} alt="Logo" />
+        </Link>
       </motion.div>
 
       {/* Hamburger Menu */}
@@ -62,9 +66,9 @@ const Navbar = () => {
               whileHover={{ scale: 1.1, color: '#3b82f6' }}
               transition={{ type: 'spring', stiffness: 150, damping: 10 }}
             >
-              <a href={`/${link.toLowerCase()}`} className="navbar-link">
+              <Link to={`/${link.toLowerCase()}`} className="navbar-link" onClick={() => setMenuOpen(false)}>
                 {link}
-              </a>
+              </Link>
             </motion.li>
           ))}
           <motion.li
@@ -87,7 +91,7 @@ const Navbar = () => {
       >
         {/* Close Button */}
         <div className="close-icon" onClick={toggleMenu}>
-          &#10006;  
+          &#10006; {/* X icon to close the side menu */}
         </div>
         <ul>
           {['Home', 'About', 'Portfolio', 'Product', 'Contact'].map((link, index) => (
@@ -96,9 +100,9 @@ const Navbar = () => {
               whileHover={{ scale: 1.1 }}
               transition={{ type: 'spring', stiffness: 150, damping: 10 }}
             >
-              <a href={`/${link.toLowerCase()}`} onClick={toggleMenu}>
+              <Link to={`/${link.toLowerCase()}`} onClick={toggleMenu}>
                 {link}
-              </a>
+              </Link>
             </motion.li>
           ))}
           <motion.li
