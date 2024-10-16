@@ -85,8 +85,8 @@ const Navbar = () => {
       {/* Side Menu */}
       <motion.div
         className={`side-menu ${menuOpen ? 'open' : ''}`}
-        initial={{ x: 250 }} // Start off-screen to the right
-        animate={{ x: menuOpen ? 0 : 250 }} // Slide in/out based on `menuOpen`
+        initial={{ x: 250 }}    
+        animate={{ x: menuOpen ? 0 : 250 }}  
         transition={{ type: 'spring', stiffness: 300, damping: 25 }}
       >
         {/* Close Button */}

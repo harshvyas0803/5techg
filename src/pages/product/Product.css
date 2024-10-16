@@ -1,7 +1,90 @@
-.product-text{
-    color: grey;
-     text-align: center;
-     font-size: 8vh;
- height: 50vh;
-     justify-content: center;
+.product-navbar {
+    padding-top: 25px;
+    background: linear-gradient(54deg, rgba(17,19,178,0.16) 0%, rgba(249,18,221,0.15) 100%);
+}
+
+.product_cards_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;  
+    justify-items: center;
+    padding: 50px;
+}
+
+.product_card {
+    width: 100%;
+    max-width: 420px; 
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(150px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.product_card_image {
+    width: 100%;
+    height: 220px;  
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product_card_title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #394c54;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.product_card_description {
+    font-size: 16px;
+    color: #6A6A6A;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.read_more_button {
+    background: transparent;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid transparent;  
+    border-radius: 20px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #31b9f3, #6d47ed);  
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;  
+    border-image: linear-gradient(to right, #31b9f3, #6d47ed) 1; 
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.read_more_button:hover {
+    background-image: linear-gradient(to right, #6d47ed, #31b9f3);  
+    -webkit-text-fill-color: black; 
+    border-image: linear-gradient(to right, #6d47ed, #31b9f3) 1;  
+}
+
+@media (max-width: 900px) {
+    .product_cards_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .product_cards_container {
+        grid-template-columns: 1fr;
+    }
+
+    .product_card_image {
+        height: 180px; /* Adjust height for smaller screens */
+    }
 }
