@@ -20,8 +20,9 @@ const Hero = () => {
         visible: { opacity: 1, transition: { duration: 1.2 } },
       }}
     >
+         <Navbar />
       <div className="main">
-        <Navbar />
+     
         <div className="hero">
           <motion.div
             className="left"

@@ -1,122 +1,39 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import { motion } from 'framer-motion';
-import logo from '../../assets/logo.png';
 import './Navbar.css';
+import logo from '../../assets/logo.png';
+import { FaBars } from 'react-icons/fa';
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Function to toggle the side menu
+  const handleCall = () => {
+    window.location.href = 'tel:+917028828831';
+  };
+
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <motion.div
-      className="navbar"
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
-      {/* Logo with Link to Homepage */}
-      <motion.div
-        className="logo"
-        whileHover={{ scale: 1.1, rotate: 5 }}
-        transition={{ type: 'spring', stiffness: 300 }}
-      >
-        <Link to="/" onClick={() => setMenuOpen(false)}>
-          <img src={logo} alt="Logo" />
-        </Link>
-      </motion.div>
-
-      {/* Hamburger Menu */}
-      <motion.div
-        className="menu-toggle"
-        onClick={toggleMenu}
-        whileHover={{ scale: 1.2 }}
-        transition={{ type: 'spring', stiffness: 250 }}
-      >
-        &#9776; {/* This is the hamburger icon */}
-      </motion.div>
-
-      <div className="others">
-        <motion.ul
-          className="navbar-links"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {
-              opacity: 0,
-              y: -20,
-            },
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: {
-                delay: 0.3,
-                staggerChildren: 0.2,
-              },
-            },
-          }}
-        >
-          {['Home', 'About', 'Portfolio', 'Product', 'Contact'].map((link, index) => (
-            <motion.li
-              key={index}
-              whileHover={{ scale: 1.1, color: '#3b82f6' }}
-              transition={{ type: 'spring', stiffness: 150, damping: 10 }}
-            >
-              <Link to={`/${link.toLowerCase()}`} className="navbar-link" onClick={() => setMenuOpen(false)}>
-                {link}
-              </Link>
-            </motion.li>
-          ))}
-          <motion.li
-            whileHover={{ scale: 1.1, color: '#f39c12' }}
-            transition={{ type: 'spring', stiffness: 150, damping: 10 }}
-          >
-            <a href="tel:+917028828831" className="call-now">
-              Call Now →
-            </a>
-          </motion.li>
-        </motion.ul>
+    <div className='main-navbar'>
+      <div className="logo">
+        <img src={logo} alt="5Techg" />
       </div>
-
-      {/* Side Menu */}
-      <motion.div
-        className={`side-menu ${menuOpen ? 'open' : ''}`}
-        initial={{ x: 250 }}    
-        animate={{ x: menuOpen ? 0 : 250 }}  
-        transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-      >
-        {/* Close Button */}
-        <div className="close-icon" onClick={toggleMenu}>
-          &#10006; {/* X icon to close the side menu */}
+      <div className="nav-content">
+        <div className={`links ${isMenuOpen ? 'active' : ''}`}>
+          <a href="/home">Home</a>
+          <a href="/about">About</a>
+          <a href="/portfolio">Portfolio</a>
+          <a href="/product">Product</a>
+          <a href="/contact">Contact</a>
+          <button className="call-now" onClick={handleCall}>Call Now →</button>
         </div>
-        <ul>
-          {['Home', 'About', 'Portfolio', 'Product', 'Contact'].map((link, index) => (
-            <motion.li
-              key={index}
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: 'spring', stiffness: 150, damping: 10 }}
-            >
-              <Link to={`/${link.toLowerCase()}`} onClick={toggleMenu}>
-                {link}
-              </Link>
-            </motion.li>
-          ))}
-          <motion.li
-            whileHover={{ scale: 1.1 }}
-            transition={{ type: 'spring', stiffness: 150, damping: 10 }}
-          >
-            <a href="tel:+917028828831" className="call-now" onClick={toggleMenu}>
-              Call Now →
-            </a>
-          </motion.li>
-        </ul>
-      </motion.div>
-    </motion.div>
+        <div className="hamburger" onClick={toggleMenu}>
+          <FaBars />
+        </div>
+      </div>
+    </div>
   );
-};
+}
 
 export default Navbar;
