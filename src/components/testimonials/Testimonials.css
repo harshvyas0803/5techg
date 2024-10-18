@@ -3,7 +3,8 @@
     text-align: center;
     padding: 50px;
     color: #394c54;
-    background-color: #f9f9f9;
+    background: rgb(0,154,228);
+    background: radial-gradient(circle, rgba(0,154,228,0.09576330532212884) 0%, rgba(255,0,232,0.0985644257703081) 100%);
 }
 
 .testimonials_heading {
