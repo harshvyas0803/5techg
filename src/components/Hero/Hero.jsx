@@ -20,9 +20,8 @@ const Hero = () => {
         visible: { opacity: 1, transition: { duration: 1.2 } },
       }}
     >
-         <Navbar />
+      <Navbar />
       <div className="main">
-     
         <div className="hero">
           <motion.div
             className="left"
@@ -30,10 +29,11 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.5, ease: 'easeInOut' }}
           >
-            <motion.h1
+            <motion.h1 className='heading'
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5, ease: 'easeOut' }}
+              style={{ fontSize: '4vh' }}
             >
               Great products <br /> Are built by<br /> Great Teams
             </motion.h1>
@@ -73,7 +73,6 @@ const Hero = () => {
         </div>
       </div>
 
-       
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
