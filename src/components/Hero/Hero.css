@@ -1,4 +1,137 @@
-.main {
+/* Base Styles */
+.main-hero {
+    display: flex;
+    background: rgb(0, 154, 228);
+    background: linear-gradient(161deg, rgba(0,154,228,0.247) 0%, rgba(255,0,232,0.253) 100%);
+    min-height: 80vh;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: 800;
+    color: #205569;
+}
+
+p {
+    font-weight: 500;
+    font-size: 20px;
+    color: #205569;
+}
+
+.LR {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+}
+
+.left, .right {
+    flex: 1;
+}
+
+.right img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(90deg, #e254ff, #57d3ff) 1;
+    background: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(90deg, #e254ff, #57d3ff);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    border-image: linear-gradient(90deg, rgba(11, 11, 170, 0.662), rgba(0, 204, 255, 0.8)) 1;
+    border: 8px solid transparent;
+    background-image: linear-gradient(90deg, rgba(11, 11, 170, 0.662), rgba(0, 204, 255, 0.8));
+}
+
+.contact-button::after {
+    content: "➔";
+    padding-left: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .LR {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .LR {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .left, .right {
+        flex: none;
+        width: 100%;
+    }
+
+    .right {
+        margin-top: 20px;
+    }
+
+    .contact-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .contact-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+
+
+
+/* .main {
     background: linear-gradient(160deg, rgba(120,209,218,0.4907212885154062) 0%, rgba(186,28,161,0.2358193277310925) 57%);
     min-height: 80vh;
     justify-content: space-between;  
@@ -106,4 +239,4 @@
         font-size: 14px; 
         padding: 8px 16px; 
     }
-}
+} */

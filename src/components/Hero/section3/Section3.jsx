@@ -68,20 +68,19 @@ const Section3 = () => {
       </motion.div>
 
       {/* Image with hover animation */}
-      <motion.div 
+      <div 
         className="section3_img_container"
-        whileHover={{ scale: 1.05, rotate: 5 }}
-        transition={{ type: 'spring', stiffness: 300 }}
+         
       >
-        <motion.img
+        <img
           src={section3img} 
           alt="Business Solutions" 
           className="section3_image"
           initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }} // Trigger fade-in and slide effect on view
+          whileInView={{ opacity: 1, x: 0 }}  
           transition={{ duration: 1, ease: "easeOut" }}
         />
-      </motion.div>
+      </div>
     </motion.div>
   );
 };
