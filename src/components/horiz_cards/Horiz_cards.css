@@ -205,3 +205,58 @@ margin-right: 10px;
     width: 100%;
   }
 }
+.read_more_button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: transparent; /* Make background transparent */
+  border: 2px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+  color: transparent; /* Make text color transparent initially */
+  background-image: linear-gradient(103deg, rgb(190, 73, 124) 0%, rgba(148, 187, 233, 1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  width: fit-content;
+}
+
+.read_more_button:hover {
+  background-color: transparent; /* Keep background transparent on hover */
+  color: transparent; /* Keep text transparent on hover */
+}
+
+.read_more_button:active {
+  background-image: linear-gradient(103deg, rgb(190, 73, 124) 0%, rgba(148, 187, 233, 1) 100%); /* Set background to gradient */
+  color: white; /* Change text color to white or any color of your choice */
+}
+.read_more_button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: transparent; /* Start with a transparent background */
+  border: 2px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+  color: transparent; /* Start with transparent text color */
+  background-image: linear-gradient(103deg, rgb(190, 73, 124) 0%, rgba(148, 187, 233, 1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  width: fit-content;
+}
+
+.read_more_button:hover {
+  background-color: transparent; /* Keep background transparent on hover */
+  color: transparent; /* Keep text transparent on hover */
+}
+
+.read_more_button:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+.read_more_button:active {
+  background: rgb(144,7,150);
+  background: linear-gradient(90deg, rgba(144,7,150,0.37307422969187676) 0%, rgba(0,212,255,0.375875350140056) 100%);
+  color: white; /* Change text color to white */
+}
