@@ -23,47 +23,24 @@ const Portfolio = () => {
   };
 
   return (
-    <div className='main-portfolio-section'>
+    <div className='portfolio-container'>
       <Navbar />
       <div className="portfolio-content">
-        <div className="portfolio-heading">
-          <h1>Some of our finest work</h1>
+        <h1 className="portfolio-title">Some of our finest work</h1>
+
+        <div className="filter-buttons">
+          {['all', 'mobile', 'web', 'logos', 'digital'].map(filter => (
+            <span
+              key={filter}
+              className={`filter-button ${activeFilter === filter ? 'active' : ''}`}
+              onClick={() => setActiveFilter(filter)}
+            >
+              {filter === 'digital' ? 'Digital Marketing' : `${filter.charAt(0).toUpperCase() + filter.slice(1)} Apps`}
+            </span>
+          ))}
         </div>
 
-        <div className="portfolio-filters">
-          <span
-            className={`portfolio-filter-item ${activeFilter === 'all' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('all')}
-          >
-            All works
-          </span>
-          <span
-            className={`portfolio-filter-item ${activeFilter === 'mobile' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('mobile')}
-          >
-            Mobile Apps
-          </span>
-          <span
-            className={`portfolio-filter-item ${activeFilter === 'web' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('web')}
-          >
-            Web Apps
-          </span>
-          <span
-            className={`portfolio-filter-item ${activeFilter === 'logos' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('logos')}
-          >
-            Logos
-          </span>
-          <span
-            className={`portfolio-filter-item ${activeFilter === 'all' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('all')}
-          >
-            Digital Marketing
-          </span>
-        </div>
-
-        <div className="portfolio-project-display">
+        <div className="project-display">
           {renderProjects()}
         </div>
       </div>

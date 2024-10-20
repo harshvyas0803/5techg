@@ -1,5 +1,6 @@
 .main-container {
- 
+    background: rgb(150,7,99);
+background: radial-gradient(circle, rgba(150,7,99,0.036939775910364125) 0%, rgba(0,212,255,0.04254201680672265) 100%);
     padding: 20px;
     text-align: center;
     display: flex;

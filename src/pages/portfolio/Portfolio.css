@@ -1,37 +1,35 @@
-.main-portfolio-section {
+.portfolio-container {
     background: linear-gradient(54deg, rgba(17,19,178,0.16) 0%, rgba(249,18,221,0.15) 100%);
     padding-top: 30px;
 }
 
 .portfolio-content {
     min-height: 90vh;
+    text-align: center;
 }
 
-.portfolio-heading {
-    text-align: center;
+.portfolio-title {
     margin-top: 60px;
     color: #5D5D5D;
     font-weight: 900;
-    font-size: 120px;
+    font-size: 80px;
 }
 
-.portfolio-filters {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 60px;
+.filter-buttons {
+    margin: 20px 0 60px;
 }
 
-.portfolio-filter-item {
+.filter-button {
     font-size: 24px;
-    color: #5D5D5D; /* Updated color */
+    color: #5D5D5D;
     margin: 0 25px;
-    font-weight: 700;
+    font-weight: 400;
     cursor: pointer;
     position: relative;
     transition: color 0.3s ease;
 }
 
-.portfolio-filter-item::after {
+.filter-button::after {
     content: '';
     position: absolute;
     left: 0;
@@ -44,36 +42,36 @@
     transition: transform 0.3s ease;
 }
 
-.portfolio-filter-item:hover::after, 
-.portfolio-filter-item.active::after {
+.filter-button:hover::after, 
+.filter-button.active::after {
     transform: scaleX(1);
     transform-origin: left;
 }
 
-.portfolio-filter-item:hover {
+.filter-button:hover {
     color: #030000;
 }
 
-.portfolio-filter-item.active {
+.filter-button.active {
     color: #007bff;
 }
 
 @media (max-width: 768px) {
-    .portfolio-heading {
+    .portfolio-title {
         font-size: 5vh;
     }
 
-    .portfolio-filter-item {
+    .filter-button {
         font-size: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .portfolio-heading {
+    .portfolio-title {
         font-size: 4vh;
     }
 
-    .portfolio-filter-item {
+    .filter-button {
         font-size: 18px;
     }
 }
