@@ -2,8 +2,8 @@ import React from 'react';
 import './Cards.css';
 import { motion } from 'framer-motion';
 
-const Card = ({ image, title }) => {
-  // Animation Variants
+const Card = ({ image, title, description }) => {
+  
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: { 
@@ -25,6 +25,7 @@ const Card = ({ image, title }) => {
     >
       <img src={image} alt={title} className="card-image" />
       <p className="card-title">{title}</p>
+      <div className="card-description">{description}</div>
     </motion.div>
   );
 };

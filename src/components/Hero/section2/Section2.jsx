@@ -27,13 +27,13 @@ const Section2 = () => {
   }, [controls, inView]);
 
   const sections = [
-    { image: img1, title: 'Mobile App Development' },
-    { image: img2, title: 'Web App Development' },
-    { image: img3, title: 'Cloud Computing Services' },
-    { image: img4, title: 'Data Science Services' },
-    { image: img5, title: 'Robotics Process Automation' },
-    { image: img6, title: 'Digital Marketing' }
-  ];
+    { image: img1, title: 'Mobile App Development', description: 'Build responsive mobile applications.' },
+    { image: img2, title: 'Web App Development', description: 'Create dynamic web applications.' },
+    { image: img3, title: 'Cloud Computing Services', description: 'Leverage cloud technologies for scalability.' },
+    { image: img4, title: 'Data Science Services', description: 'Analyze data for actionable insights.' },
+    { image: img5, title: 'Robotics Process Automation', description: 'Automate repetitive tasks using RPA.' },
+    { image: img6, title: 'Digital Marketing', description: 'Enhance online presence and reach.' }
+];
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 1, y: 100 },
@@ -85,13 +85,17 @@ const Section2 = () => {
       <motion.div className="cards-container">
         {sections.map((section, index) => (
           <motion.div
-            key={index}
-            variants={cardVariants}
-            whileHover={{ scale: 1.05, boxShadow: '0px 20px 30px rgba(0,0,0,0.3)' }} // Hover effect
-            transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-          >
-            <Card image={section.image} title={section.title} />
-          </motion.div>
+  key={index}
+  variants={cardVariants}
+  whileHover={{ scale: 1.05, boxShadow: '0px 20px 30px rgba(0,0,0,0.3)' }} // Hover effect
+  transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+>
+  <Card 
+    image={section.image} 
+    title={section.title} 
+    description={section.description} 
+  />
+</motion.div>
         ))} 
       </motion.div>
     </motion.div>

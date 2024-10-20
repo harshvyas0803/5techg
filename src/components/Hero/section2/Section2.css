@@ -1,6 +1,5 @@
 .main-container {
-    background: rgb(238, 174, 202);
-    background: linear-gradient(103deg, rgba(238, 174, 202, 0.38988095238095233) 0%, rgba(148, 187, 233, 0.4375) 100%);
+ 
     padding: 20px;
     text-align: center;
     display: flex;

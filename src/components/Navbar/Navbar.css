@@ -1,5 +1,5 @@
 .main-navbar {
-  height: 85px;
+  height: 95px;
   width: 100vw; 
   background: rgb(194, 228, 236);
   background: linear-gradient(54deg, rgba(194, 228, 236, 0.134) 0%, rgba(254, 254, 254, 0.146) 100%);
@@ -7,6 +7,7 @@
   align-items: center;   
   padding: 0 20px;
   position: relative;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 html {
@@ -47,13 +48,15 @@ html {
 
 .call-now {
   padding: 5px 13px;
-  background: linear-gradient(to right, #6d47ed, #31b9f3);
+  background: rgb(144,7,150);
+  background: linear-gradient(90deg, rgba(144,7,150,0.8464635854341737) 0%, rgba(0,212,255,1) 100%);
   color: white;
   font-size: 1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s ease;
+  width: 130px;
 }
 
 .call-now:hover {
