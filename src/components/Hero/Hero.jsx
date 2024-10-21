@@ -17,7 +17,7 @@ const Hero = () => {
 
   return (
     <div>
-      <Navbar />
+      <Navbar className="navbar-in-hero" />
 
       <div className='main-hero'>
         <div className="LR">
@@ -35,7 +35,7 @@ const Hero = () => {
 
             {/* Updated button styling */}
             <a className="contact-button" onClick={handleCall}>
-              Contact
+              Contact Now
             </a>
           </div>
 
@@ -56,34 +56,6 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
