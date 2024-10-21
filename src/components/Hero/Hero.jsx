@@ -33,7 +33,10 @@ const Hero = () => {
               and mobile experiences.
             </p>
 
-            <a className="contact-button" onClick={handleCall}>Contact now</a>
+            {/* Updated button styling */}
+            <a className="contact-button" onClick={handleCall}>
+              Contact
+            </a>
           </div>
 
           <div className="right">
@@ -42,7 +45,6 @@ const Hero = () => {
         </div>
       </div>
 
-    
       <Companies />
       <Section2 />
       <Horiz_cards />
@@ -51,10 +53,9 @@ const Hero = () => {
       <Testimonials />
     </div>
   );
-}
+};
 
 export default Hero;
-
 
 
 

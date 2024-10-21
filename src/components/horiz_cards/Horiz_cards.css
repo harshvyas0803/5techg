@@ -1,5 +1,5 @@
 .horiz_card_list {
-  margin-top:2%;
+  margin-top: 2%;
   margin-left: 0%;
   margin-right: 5%;
   display: flex;
@@ -7,36 +7,32 @@
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 20px 40px;
-  gap: 15px;  
-  scrollbar-width: thin;  
-  scrollbar-color: rgba(190, 73, 124, 0.8) white;  
+  gap: 15px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(190, 73, 124, 0.8) white;
   position: relative;
 }
 
-
 .horiz_card_list::-webkit-scrollbar {
-  width: 8px;  
-  height: 8px;  
+  width: 8px;
+  height: 8px;
 }
-
 
 .horiz_card_list::-webkit-scrollbar-track {
-  background: white; 
-  border-radius: 10px;  
+  background: white;
+  border-radius: 10px;
 }
 
-
 .horiz_card_list::-webkit-scrollbar-thumb {
-  background: rgba(190, 73, 124, 0.8); 
-  border-radius: 10px; 
-  transition: background 0.3s ease;  
+  background: rgba(190, 73, 124, 0.8);
+  border-radius: 10px;
+  transition: background 0.3s ease;
 }
 
 .horiz_card_list::-webkit-scrollbar-thumb:hover {
-  background: rgba(148, 187, 233, 1);  
+  background: rgba(148, 187, 233, 1);
 }
 
-/* Card styles */
 .horiz_card {
   display: flex;
   flex-direction: row;
@@ -45,18 +41,19 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   height: 300px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;  
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
-  flex-shrink: 0;  
+  flex-shrink: 0;
   margin-right: 15px;
-  border: 2px solid transparent;  
+  border: 2px solid transparent;
+  position: relative;
 }
 
 .horiz_card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  border-color: rgb(238, 174, 202);  
+  border-color: rgb(238, 174, 202);
 }
 
 .card_content {
@@ -65,13 +62,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: transform 0.3s ease; /* Smooth movement */
 }
 
 .card_image {
-  width: 300px; 
-  height: 100%;  
-  object-fit: cover;   
-margin-right: 10px;
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 10px;
+  transition: transform 0.3s ease; /* Smooth movement */
 }
 
 .read_more_button {
@@ -92,6 +91,28 @@ margin-right: 10px;
   -webkit-mask-image: linear-gradient(103deg, rgb(190, 73, 124) 0%, rgba(148, 187, 233, 1) 100%);
   -webkit-mask-composite: destination-over;
   width: fit-content;
+}
+
+/* Hover effect: Move image and heading upwards and shrink them */
+.horiz_card:hover .card_image {
+  transform: translateY(-10px) scale(0.95);
+}
+
+.horiz_card:hover .card_content h4 {
+  transform: translateY(-10px) scale(0.95);
+}
+
+/* Slide-up effect for description */
+.horiz_card:hover .card_content p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Initially, hide the description and move it down */
+.card_content p {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .read_more_button:hover {
@@ -134,17 +155,10 @@ margin-right: 10px;
   background: linear-gradient(to left, white, transparent);
   z-index: 10;
 }
-.newdiv{
 
-  margin-left:12vw;
+.newdiv {
+  margin-left: 12vw;
 }
-
-
-
-
-
-
-
 
 /* Styles for screens wider than 1200px (large desktops) */
 @media (min-width: 1200px) {
@@ -204,59 +218,4 @@ margin-right: 10px;
   .read_more_button {
     width: 100%;
   }
-}
-.read_more_button {
-  margin-top: 10px;
-  padding: 10px 15px;
-  background: transparent; /* Make background transparent */
-  border: 2px solid transparent;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-weight: bold;
-  color: transparent; /* Make text color transparent initially */
-  background-image: linear-gradient(103deg, rgb(190, 73, 124) 0%, rgba(148, 187, 233, 1) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  width: fit-content;
-}
-
-.read_more_button:hover {
-  background-color: transparent; /* Keep background transparent on hover */
-  color: transparent; /* Keep text transparent on hover */
-}
-
-.read_more_button:active {
-  background-image: linear-gradient(103deg, rgb(190, 73, 124) 0%, rgba(148, 187, 233, 1) 100%); /* Set background to gradient */
-  color: white; /* Change text color to white or any color of your choice */
-}
-.read_more_button {
-  margin-top: 10px;
-  padding: 10px 15px;
-  background: transparent; /* Start with a transparent background */
-  border: 2px solid transparent;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-weight: bold;
-  color: transparent; /* Start with transparent text color */
-  background-image: linear-gradient(103deg, rgb(190, 73, 124) 0%, rgba(148, 187, 233, 1) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  width: fit-content;
-}
-
-.read_more_button:hover {
-  background-color: transparent; /* Keep background transparent on hover */
-  color: transparent; /* Keep text transparent on hover */
-}
-
-.read_more_button:focus {
-  outline: none; /* Remove default focus outline */
-}
-
-.read_more_button:active {
-  background: rgb(144,7,150);
-  background: linear-gradient(90deg, rgba(144,7,150,0.37307422969187676) 0%, rgba(0,212,255,0.375875350140056) 100%);
-  color: white; /* Change text color to white */
 }
