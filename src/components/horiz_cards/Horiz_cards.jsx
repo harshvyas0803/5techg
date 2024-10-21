@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Horiz_cards.css';
 import slider1 from '../../assets/horiz_img/slider1.png';
 import slider2 from '../../assets/horiz_img/slider2.png';
@@ -28,12 +28,6 @@ const cardData = [
 ];
 
 const Horiz_cards = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const handleButtonClick = (index) => {
-    setActiveIndex(activeIndex === index ? null : index); // Toggle active state
-  };
-
   return (
     <div className="newdiv">
       <div className="horiz_card_list">
@@ -42,10 +36,7 @@ const Horiz_cards = () => {
             <div className="card_content">
               <h4>{card.title}</h4>
               <p>{card.description}</p>
-              <button
-                className={`read_more_button ${activeIndex === index ? 'active' : ''}`}
-                onClick={() => handleButtonClick(index)}
-              >
+              <button className="read_more_button">
                 Read More
               </button>
             </div>
