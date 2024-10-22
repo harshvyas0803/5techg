@@ -27,7 +27,7 @@ const Product = () => {
             <img src={product.img} alt={product.title} className="product_card_image" />
             <h3 className="product_card_title">{product.title}</h3>
             <p className="product_card_description">{product.description}</p>
-            <button className="read_more ">
+            <button className="read_more__">
                 Read More
               </button>
           </div>
