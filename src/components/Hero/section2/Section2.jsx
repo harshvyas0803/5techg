@@ -13,7 +13,7 @@ import { motion } from 'framer-motion';
 
 const Section2 = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false, // Set to false to trigger the animation every time it's in view
+    triggerOnce: false, 
     threshold: 0.1,
   });
   const controls = useAnimation();
@@ -27,13 +27,37 @@ const Section2 = () => {
   }, [controls, inView]);
 
   const sections = [
-    { image: img1, title: 'Mobile App Development', description: 'Build responsive mobile applications.' },
-    { image: img2, title: 'Web App Development', description: 'Create dynamic web applications.' },
-    { image: img3, title: 'Cloud Computing Services', description: 'Leverage cloud technologies for scalability.' },
-    { image: img4, title: 'Data Science Services', description: 'Analyze data for actionable insights.' },
-    { image: img5, title: 'Robotics Process Automation', description: 'Automate repetitive tasks using RPA.' },
-    { image: img6, title: 'Digital Marketing', description: 'Enhance online presence and reach.' }
-];
+    { 
+      image: img1, 
+      title: 'Mobile App Development', 
+      description: 'Our team specializes in creating exceptional mobile apps that captivate users. From innovative design to seamless functionality, trust us to deliver remarkable mobile solutions that drive success.' 
+    },
+    { 
+      image: img2, 
+      title: 'Web App Development', 
+      description: 'Our expertise lies in creating standout websites that leave a lasting impression. From captivating design to seamless functionality, trust us to elevate your online presence and drive digital success.' 
+    },
+    { 
+      image: img3, 
+      title: 'Cloud Computing Services', 
+      description: 'We provide end-to-end cloud computing services, including private cloud setup, management, and expertise in Google Cloud, AWS, and Azure for public cloud deployment.' 
+    },
+    { 
+      image: img4, 
+      title: 'Data Science Services', 
+      description: 'Our data science services leverage advanced analytics and machine learning techniques to extract valuable insights from your data. From data preprocessing to predictive modeling, we help businesses harness the power of data to make informed decisions and drive growth.' 
+    },
+    { 
+      image: img5, 
+      title: 'Robotics Process Automation', 
+      description: 'Our robotic process automation (RPA) services streamline repetitive tasks, freeing up valuable human resources. With our expertise in RPA implementation and optimization, we help businesses enhance productivity, reduce errors, and achieve greater operational efficiency.' 
+    },
+    { 
+      image: img6, 
+      title: 'Digital Marketing', 
+      description: 'Our IoT development services empower businesses to harness the potential of the Internet of Things. From device connectivity to data analytics, we create innovative IoT solutions that drive efficiency and enable smart, connected experiences.' 
+    }
+  ];
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 1, y: 100 },
@@ -48,15 +72,36 @@ const Section2 = () => {
     }
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1, 
+      transition: { 
+        staggerChildren: 0.2 
+      }
+    }
+  };
+
+  const headingVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 1.2, ease: 'easeOut' } 
+    }
+  };
+
   return (
     <motion.div
       ref={ref}
       className="main-container"
       initial="hidden"
       animate={controls}
+      variants={containerVariants}
     >
       <motion.h2
         className="gradient-heading"
+        variants={headingVariants}
       >
         You’ll be in good company
       </motion.h2>
@@ -65,14 +110,15 @@ const Section2 = () => {
         {sections.map((section, index) => (
           <motion.div
             key={index}
-            variants={cardVariants}
-            whileHover={{ scale: 1.05 }} // Subtle hover effect on card
-            transition={{ type: 'spring', stiffness: 260, damping: 20 }}
             className="card"
+            variants={cardVariants}
+            whileHover={{ scale: 1.05, boxShadow: '0px 20px 30px rgba(0,0,0,0.3)' }} 
+            transition={{ type: 'spring', stiffness: 260, damping: 20 }}
           >
             <img src={section.image} alt={section.title} />
             <h3 className="card-title">{section.title}</h3>
             <p className="card-description">{section.description}</p>
+     
           </motion.div>
         ))} 
       </motion.div>

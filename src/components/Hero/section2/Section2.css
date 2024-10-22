@@ -1,14 +1,12 @@
 .main-container {
     background: rgb(150,7,99);
-background: radial-gradient(circle, rgba(150,7,99,0.036939775910364125) 0%, rgba(0,212,255,0.04254201680672265) 100%);
+    background: radial-gradient(circle, rgba(150,7,99,0.036939775910364125) 0%, rgba(0,212,255,0.04254201680672265) 100%);
     padding: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 5%;
-    border: none;
-    box-shadow: none;
 }
 
 .gradient-heading {
@@ -21,83 +19,33 @@ background: radial-gradient(circle, rgba(150,7,99,0.036939775910364125) 0%, rgba
 .cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px 0.1px; /* Reduced vertical gap (8px) and horizontal gap (4px) */
+    gap: 16px 20px;  
     justify-items: center;
     width: 100%;
-    max-width: 1200px;
-    margin-top: 20px;
-}
-
-.card {
-    background-color: white;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    width: 90%;
-    height: 250px;
-    min-width: 280px;
-}
-
-.card:hover {
-    transform: scale(1.0);
-}
-
-.card img {
-    width: 50%; /* Reduced image size */
-    margin: 0 auto;
-    border-radius: 10px;
-}
-
-.card-title {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    .cards-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 6px 6px;  
-    }
-}
-
-@media (max-width: 480px) {
-    .cards-container {
-        grid-template-columns: 1fr;
-    }
-}
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px 0.1px;
-    justify-items: center;
-    width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;  
     margin-top: 20px;
 }
 
 .card {
     background-color: white;
     position: relative;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 90%;
-    height: 300px;
-    min-width: 280px;
+    width: 100%;
+   
+    min-width: 320px;
     overflow: hidden;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    min-height: 400px; 
 }
 
 .card img {
-    width: 60%; 
+    width: 60%;  
     margin: 0 auto;
     border-radius: 10px;
     transition: transform 0.4s ease;
@@ -109,37 +57,45 @@ background: radial-gradient(circle, rgba(150,7,99,0.036939775910364125) 0%, rgba
     font-weight: bold;
     text-align: center;
     transition: transform 0.4s ease, font-size 0.4s ease;
+    color: #000; 
 }
 
+ 
 .card-description {
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 0.4s ease, transform 0.4s ease;
-    font-size: 1rem;
-    padding-top: 10px;
+    font-size: 1rem;  
     text-align: center;
+    color: #000;  
+    position: absolute;
+    width: 100%;
+    left: 4%;  
+    top: 50%;
+    transform: translate(-50%, 100%);  
 }
 
-/* Hover effect */
+ 
 .card:hover img {
-    transform: translateY(-20px) scale(0.8); /* Move up and shrink the image */
+    transform: translateY(-80px) scale(0.4); 
 }
 
 .card:hover .card-title {
-    transform: translateY(-20px);
-    font-size: 1.2rem; /* Shrink the title size */
+    transform: translateY(-800px); 
+    font-size: 1.2rem;  
 }
 
 .card:hover .card-description {
-    opacity: 1;
-    transform: translateY(0); /* Slide the description up */
+    opacity: 1;  
+    transform: translate(-50%, -40%); 
+    margin-left: -200px; 
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
     .cards-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 6px 6px;
+        gap: 12px;
     }
 }
 
@@ -149,10 +105,15 @@ background: radial-gradient(circle, rgba(150,7,99,0.036939775910364125) 0%, rgba
     }
 
     .card {
-        height: 350px;
+        height: 500px; 
     }
 
     .card img {
-        width: 70%;
+        width: 80%;
     }
+}
+.card:hover .card-title {
+    position: absolute;
+    transform: translateY(-3000px); 
+    font-size: 1.2rem;  
 }
