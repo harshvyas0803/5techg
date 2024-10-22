@@ -48,36 +48,15 @@ const Section2 = () => {
     }
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1, 
-      transition: { 
-        staggerChildren: 0.2 
-      }
-    }
-  };
-
-  const headingVariants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 1.2, ease: 'easeOut' } 
-    }
-  };
-
   return (
     <motion.div
       ref={ref}
       className="main-container"
       initial="hidden"
       animate={controls}
-      variants={containerVariants}
     >
       <motion.h2
         className="gradient-heading"
-        variants={headingVariants}
       >
         You’ll be in good company
       </motion.h2>
@@ -85,17 +64,16 @@ const Section2 = () => {
       <motion.div className="cards-container">
         {sections.map((section, index) => (
           <motion.div
-  key={index}
-  variants={cardVariants}
-  whileHover={{ scale: 1.05, boxShadow: '0px 20px 30px rgba(0,0,0,0.3)' }} // Hover effect
-  transition={{ type: 'spring', stiffness: 260, damping: 20 }}
->
-  <Card 
-    image={section.image} 
-    title={section.title} 
-    description={section.description} 
-  />
-</motion.div>
+            key={index}
+            variants={cardVariants}
+            whileHover={{ scale: 1.05 }} // Subtle hover effect on card
+            transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+            className="card"
+          >
+            <img src={section.image} alt={section.title} />
+            <h3 className="card-title">{section.title}</h3>
+            <p className="card-description">{section.description}</p>
+          </motion.div>
         ))} 
       </motion.div>
     </motion.div>
