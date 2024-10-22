@@ -116,7 +116,7 @@ const Section2 = () => {
             transition={{ type: 'spring', stiffness: 260, damping: 20 }}
           >
             <img src={section.image} alt={section.title} />
-            <h3 className="card-title">{section.title}</h3>
+            <h3 className="card-title_">{section.title}</h3>
             <p className="card-description">{section.description}</p>
      
           </motion.div>
