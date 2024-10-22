@@ -1,3 +1,4 @@
+
 import React from 'react';
 import './Horiz_cards.css';
 import slider1 from '../../assets/horiz_img/slider1.png';
@@ -36,7 +37,7 @@ const Horiz_cards = () => {
             <div className="card_content">
               <h4>{card.title}</h4>
               <p>{card.description}</p>
-              <button className="read_more_button">
+              <button className="read_more ">
                 Read More
               </button>
             </div>
