@@ -50,7 +50,7 @@ const Section2 = () => {
     { 
       image: img5, 
       title: 'Robotics Process Automation', 
-      description: 'Our robotic process automation (RPA) services streamline repetitive tasks, freeing up valuable human resources. With our expertise in RPA implementation and optimization, we help businesses enhance productivity, reduce errors, and achieve greater operational efficiency.' 
+      description: 'Our robotic process automation (RPA) services streamline repetitive tasks, freeing up valuable human resources. With our expertise in RPA implementation and optimization, reduce errors, and achieve greater operational efficiency.' 
     },
     { 
       image: img6, 
