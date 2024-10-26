@@ -185,3 +185,93 @@
     margin-right: auto; /* Center the content */
     padding: 0 20px;  
 }
+/* Large screens */
+.contentdiv {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12vh;
+    color: #333;
+    max-width: 100%;
+    margin-left: 60px;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Stack content vertically */
+    .contentdiv, .contentdiv2 {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 6vh;
+        padding: 0 15px;
+    }
+
+    .left, .right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contentdiv h2 {
+        font-size: 6vh; /* Smaller font size for headings */
+    }
+
+    .contentdiv p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .team-image {
+        max-width: 90%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .timeline {
+        width: 90%; /* Reduce width */
+        margin: 20px auto;
+    }
+
+    .timeline-line {
+        width: 10px; /* Thinner line */
+    }
+}
+
+/* Extra-small screens (mobile) */
+@media (max-width: 480px) {
+    .contentdiv h2 {
+        font-size: 5vh; /* Adjusted font size for mobile */
+    }
+
+    .contentdiv2 {
+        padding: 10px; /* Reduced padding */
+    }
+
+    .team-image {
+        max-width: 80%; /* Smaller width for mobile */
+    }
+
+    .timeline-event {
+        padding: 15px;
+        margin: 40px 0;
+    }
+
+    .timeline-line {
+        width: 8px;
+    }
+}
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 0;
+  width: 35px;
+  background: linear-gradient(172deg, rgba(63, 94, 251, 0.363) 0%, rgba(252, 70, 106, 0.331) 100%);
+  transform: translateX(-50%);
+  z-index: -1;
+  transition: height 5s ease; /* Adjusted animation speed */
+}
+
+.animate-line {
+  height: 100%; /* Full height for the timeline line */
+}
