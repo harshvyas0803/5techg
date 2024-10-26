@@ -28,23 +28,24 @@ html {
 }
 
 .links {
-  display: flex;  /* Always display on larger screens */
+  display: flex;  
   gap: 20px;
   justify-content: center;  
   flex-grow: 1; 
-  transition: all 0.3s ease; /* Add a transition for smooth effect */
+  transition: all 0.3s ease; 
 }
 
 .links a {
   text-decoration: none;
-  color: #454545;
+ 
   font-weight: 500;
   padding: 5px 10px;
   font-size: 1rem;
 }
 
 .links a:hover {
-  color: #000000;
+  
+  color: #454545;
 }
 
 .call-now {
