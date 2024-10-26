@@ -24,11 +24,11 @@ const Navbar = () => {
       <div className="nav-content">
         {/* Menu Links with Animation */}
         <div className={`links ${isMenuOpen ? 'active' : ''}`}>
-          <motion.a href="/home" whileHover={{ scale: 1.1, color: "#000000" }}>Home</motion.a>
-          <motion.a href="/about" whileHover={{ scale: 1.1, color: "#000000" }}>About</motion.a>
-          <motion.a href="/portfolio" whileHover={{ scale: 1.1, color: "#000000" }}>Portfolio</motion.a>
-          <motion.a href="/product" whileHover={{ scale: 1.1, color: "#000000" }}>Product</motion.a>
-          <motion.a href="/contact" whileHover={{ scale: 1.1, color: "#000000" }}>Contact</motion.a>
+          <motion.a href="/home" whileHover={{ scale: 1.1}}>Home</motion.a>
+          <motion.a href="/about" whileHover={{ scale: 1.1 }}>About</motion.a>
+          <motion.a href="/portfolio" whileHover={{ scale: 1.1 }}>Portfolio</motion.a>
+          <motion.a href="/product" whileHover={{ scale: 1.1 }}>Product</motion.a>
+          <motion.a href="/contact" whileHover={{ scale: 1.1 }}>Contact</motion.a>
           <motion.button
             className="call-now"
             onClick={handleCall}

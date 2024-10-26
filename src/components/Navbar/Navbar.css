@@ -38,6 +38,7 @@ html {
 .links a {
   text-decoration: none;
  
+  color: #454545;
   font-weight: 500;
   padding: 5px 10px;
   font-size: 1rem;
