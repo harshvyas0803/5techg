@@ -136,8 +136,9 @@ p {
         font-size: 14px;
     }
 .right{
-    width: 0px;margin-left: -700px;
+    width: 0px;margin-left: -310px;
     height: auto;
+    width: 300px;
 }
     .contact-button {
         font-size: 12px;
@@ -213,3 +214,4 @@ p {
     content: "➔";  
     padding-left: 5px;
 }
+
