@@ -1,9 +1,8 @@
-// Navbar.js
 import React, { useState } from 'react';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
-import { FaBars } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion';
+import { FaBars, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,9 +21,8 @@ const Navbar = () => {
         <img src={logo} alt="5Techg" />
       </div>
       <div className="nav-content">
-        {/* Menu Links with Animation */}
         <div className={`links ${isMenuOpen ? 'active' : ''}`}>
-          <motion.a href="/home" whileHover={{ scale: 1.1}}>Home</motion.a>
+          <motion.a href="/home" whileHover={{ scale: 1.1 }}>Home</motion.a>
           <motion.a href="/about" whileHover={{ scale: 1.1 }}>About</motion.a>
           <motion.a href="/portfolio" whileHover={{ scale: 1.1 }}>Portfolio</motion.a>
           <motion.a href="/product" whileHover={{ scale: 1.1 }}>Product</motion.a>
@@ -38,7 +36,27 @@ const Navbar = () => {
           </motion.button>
         </div>
 
-        {/* Hamburger Icon with Rotation Animation */}
+        <div className="social-links">
+          <motion.a
+            href="https://www.instagram.com/5techg_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="instagram"
+            whileHover={{ scale: 1.2 }}
+          >
+            <FaInstagram />
+          </motion.a>
+          <motion.a
+            href="https://in.linkedin.com/company/5techg"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="linkedin"
+            whileHover={{ scale: 1.2 }}
+          >
+            <FaLinkedin />
+          </motion.a>
+        </div>
+
         <motion.div
           className="hamburger"
           onClick={toggleMenu}
