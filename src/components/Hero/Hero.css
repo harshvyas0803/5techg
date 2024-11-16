@@ -48,6 +48,48 @@ p {
     width: 600px;
     height: 500px;
 }
+@media (max-width: 660px) {
+    .right img {
+    width: 450px;
+    height: 430px;
+    margin-left: -20px;
+    }
+  
+  }
+  @media (max-width: 440px) {
+    .right img {
+    width: 380px;
+    height: 370px;
+    margin-left: 105px;
+    }
+  
+  }
+
+  @media (max-width: 480px) {
+    .right img {
+    margin-left: 105px;
+    }
+}
+  @media (max-width: 640px) {
+.right_{
+    width: 250px;
+}
+.right_ img{
+    width: 460px;
+    margin-left: -120px;
+}
+  }
+
+  @media (max-width: 380px) {
+    .right_{
+        width: 150px;
+    }
+    .right_ img{
+        width: 376px;
+        margin-left: -110px;
+    }
+      }
+  
 .contact-button {
     display: inline-block;
     padding: 10px 20px;
@@ -164,7 +206,7 @@ p {
     .paragraph {
         padding-top: 1vh;
         font-size: 2.5vh; 
-        text-align: center; 
+        text-align: left; 
     }
 
     .right {

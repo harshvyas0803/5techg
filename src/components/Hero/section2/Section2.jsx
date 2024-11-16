@@ -45,17 +45,17 @@ const Section2 = () => {
     { 
       image: img4, 
       title: 'Data Science Services', 
-      description: 'Our data science services leverage advanced analytics and machine learning techniques to extract valuable insights from your data. From data preprocessing to predictive modeling, we help businesses harness the power of data to make informed decisions and drive growth.' 
+      description: 'We provide data science services using advanced analytics and machine learning to extract insights, enabling informed decisions and business growth.' 
     },
     { 
       image: img5, 
       title: 'Robotics Process Automation', 
-      description: 'Our robotic process automation (RPA) services streamline repetitive tasks, freeing up valuable human resources. With our expertise in RPA implementation and optimization, reduce errors, and achieve greater operational efficiency.' 
+      description: 'Our RPA services automate repetitive tasks, reduce errors, and boost efficiency, freeing up valuable human resources,Which can be leveraged afterwards.' 
     },
     { 
       image: img6, 
       title: 'Digital Marketing', 
-      description: 'Our IoT development services empower businesses to harness the potential of the Internet of Things. From device connectivity to data analytics, we create innovative IoT solutions that drive efficiency and enable smart, connected experiences.' 
+      description: 'Our IoT services deliver smart, connected solutions, enhancing efficiency with seamless device connectivity and data analytics.' 
     }
   ];
 
@@ -116,8 +116,9 @@ const Section2 = () => {
             transition={{ type: 'spring', stiffness: 260, damping: 20 }}
           >
             <img src={section.image} alt={section.title} />
-            <h3 className="card-title_">{section.title}</h3>
             <p className="card-description">{section.description}</p>
+            <h3 className="card-title_">{section.title}</h3>
+           
      
           </motion.div>
         ))} 

@@ -181,21 +181,11 @@
     margin-top: 12vh;
     color: #333;
     max-width: 100%; /* Limit the width */
-    margin-left: 60px;
+    margin-left: 50px;
     margin-right: auto; /* Center the content */
     padding: 0 20px;  
 }
 /* Large screens */
-.contentdiv {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 12vh;
-    color: #333;
-    max-width: 100%;
-    margin-left: 60px;
-    margin-right: auto;
-    padding: 0 20px;
-}
 
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
@@ -209,7 +199,7 @@
 
     .left, .right {
         width: 100%;
-        text-align: center;
+        text-align:left;
     }
 
     .contentdiv h2 {
@@ -236,6 +226,12 @@
         width: 10px; /* Thinner line */
     }
 }
+/* @media (max-width: 650px) {
+    .right img{
+        margin-left: -120px;
+        width: 180px;
+    }
+} */
 
 /* Extra-small screens (mobile) */
 @media (max-width: 480px) {
