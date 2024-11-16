@@ -62,7 +62,7 @@ const Navbar = () => {
           onClick={toggleMenu}
           whileTap={{ scale: 0.8 }}
           animate={{ rotate: isMenuOpen ? 90 : 0 }}
-          transition={{ type: "spring", stiffness: 300 }}
+          // transition={{ type: "spring", stiffness: 300 }}
         >
           <FaBars />
         </motion.div>
